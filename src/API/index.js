@@ -10,8 +10,9 @@ export const fetchData = async (country) => {
   }
 
   try {
-    const { data: { confirmed, recovered, deaths, lastUpdate } } = await axios.get(flexibleURL);
-
+    const {
+      data: { confirmed, recovered, deaths, lastUpdate },
+    } = await axios.get(flexibleURL);
 
     return { confirmed, recovered, deaths, lastUpdate };
   } catch (error) {
